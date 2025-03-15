@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,10 +16,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 47% 23%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 187 57% 45%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,84 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
   }
+}
+
+.code-snippet {
+  position: relative;
+  overflow: hidden;
+  background-color: #1E293B;
+  border-radius: 0.375rem;
+  color: #E2E8F0;
+  font-family: "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.code-snippet pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.code-snippet .code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #2D3748;
+  border-bottom: 1px solid #4A5568;
+}
+
+.code-snippet .code-header .file-name {
+  font-size: 0.75rem;
+  color: #A0AEC0;
+}
+
+.code-snippet .code-header .buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.code-snippet .code-header .button {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.code-snippet .code-header .button.red {
+  background-color: #F56565;
+}
+
+.code-snippet .code-header .button.yellow {
+  background-color: #ECC94B;
+}
+
+.code-snippet .code-header .button.green {
+  background-color: #48BB78;
+}
+
+.code-line.before {
+  color: #FC8181;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.code-line.after {
+  color: #9AE6B4;
+}
+
+.code-line .highlight {
+  background-color: rgba(56, 178, 172, 0.2);
+  border-radius: 0.125rem;
+  padding: 0.125rem 0;
+}
+
+/* TypeWriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid #38B2AC;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.10em;
 }
