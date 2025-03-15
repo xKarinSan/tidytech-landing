@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Zap } from 'lucide-react';
+import { ArrowRight, Zap, FileText, Brush } from 'lucide-react';
 
 const CTA = () => {
   return (
@@ -33,6 +33,17 @@ const CTA = () => {
           <div className="p-6 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
             <div className="text-3xl font-bold text-brand-teal mb-2">3x</div>
             <p className="text-sm text-brand-light/70">Developer Productivity</p>
+          </div>
+        </div>
+        
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-xl mx-auto">
+          <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
+            <FileText className="h-5 w-5 text-brand-teal flex-shrink-0" />
+            <p className="text-left text-sm text-brand-light">Auto-generated documentation for all your codebase</p>
+          </div>
+          <div className="flex items-center gap-3 bg-white/5 p-4 rounded-lg">
+            <Brush className="h-5 w-5 text-brand-teal flex-shrink-0" />
+            <p className="text-left text-sm text-brand-light">Automatic code cleaning and optimization</p>
           </div>
         </div>
         

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { AlertTriangle, Clock, Banknote, Code2, BrainCircuit } from 'lucide-react';
+import { AlertTriangle, Clock, Banknote, Code2, BrainCircuit, FileText, GitMerge } from 'lucide-react';
 
 const Problem = () => {
   const problems = [
@@ -15,6 +15,11 @@ const Problem = () => {
       description: "Engineers spend up to 42% of their time dealing with technical debt rather than building new features."
     },
     {
+      icon: <FileText className="h-6 w-6 text-blue-500" />,
+      title: "Poor Documentation",
+      description: "Missing or outdated documentation forces developers to waste time understanding code functionality."
+    },
+    {
       icon: <Banknote className="h-6 w-6 text-green-600" />,
       title: "Expensive Maintenance",
       description: "Poor code quality costs businesses up to 2.5x more in long-term maintenance costs."
@@ -23,6 +28,11 @@ const Problem = () => {
       icon: <BrainCircuit className="h-6 w-6 text-purple-500" />,
       title: "AI-Generated Inconsistencies",
       description: "LLMs create code that doesn't follow your team's standards and practices."
+    },
+    {
+      icon: <GitMerge className="h-6 w-6 text-indigo-500" />,
+      title: "Knowledge Silos",
+      description: "Undocumented code creates dependencies on specific team members who understand it."
     }
   ];
 
@@ -32,11 +42,11 @@ const Problem = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">The Hidden Cost of Technical Debt</h2>
           <p className="text-lg text-brand-light/80 max-w-2xl mx-auto">
-            As codebases grow and teams use AI tools, technical debt accumulates silently, slowing down development and increasing costs.
+            As codebases grow and teams use AI tools, technical debt accumulates silently, slowing down development, creating documentation gaps, and increasing costs.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
             <div 
               key={index} 
@@ -57,7 +67,7 @@ const Problem = () => {
             CleanCode cuts technical debt by up to 60%
           </h3>
           <p className="text-lg text-brand-light/80 max-w-2xl mx-auto">
-            Our intelligent system analyzes your codebase, detects issues, and fixes them automatically—ensuring consistency across all code, even AI-generated ones.
+            Our intelligent system analyzes your codebase, detects issues, fixes them automatically, and generates clean documentation—ensuring consistency across all code, even AI-generated ones.
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Code } from "lucide-react";
+import { ArrowRight, Sparkles, Code, FileText } from "lucide-react";
 import CodeSnippet from './CodeSnippet';
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-brand-gray max-w-lg">
-            Automatically detect and fix inconsistent patterns, poor practices, and technical debt in your codebase—even in AI-generated code.
+            Automatically detect, fix, and document inconsistent patterns, poor practices, and technical debt in your codebase—even in AI-generated code.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -54,7 +54,7 @@ const Hero = () => {
             <CodeSnippet
               fileName="messyAICode.js"
               language="javascript"
-              beforeCode={`// AI-generated mess
+              beforeCode={`// AI-generated mess with no docs
 function getData(user_id, user_Name) {
   // This doesn't follow our naming standards
   let result = [];
@@ -72,7 +72,12 @@ function getData(user_id, user_Name) {
   // This will always return empty array!
   return result;
 }`}
-              afterCode={`// CleanCode optimized
+              afterCode={`/**
+ * Fetches user data from the API
+ * @param {string} userId - The user's unique identifier
+ * @param {string} userName - The user's display name
+ * @returns {Promise<Array>} - The user's data items
+ */
 async function getData(userId, userName) {
   // Follows team's naming conventions
   try {

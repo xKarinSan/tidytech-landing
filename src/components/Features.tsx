@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckCircle2, GitMerge, Sparkles, Shield, Bot, Zap } from 'lucide-react';
+import { CheckCircle2, GitMerge, Sparkles, Shield, Bot, Zap, FileText, Brush } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Features = () => {
@@ -16,6 +16,18 @@ const Features = () => {
       title: "Automatic Fixes",
       description: "Apply consistent naming, formatting, and structural patterns with a single click",
       color: "bg-green-500/10 text-green-500 border-green-500/20"
+    },
+    {
+      icon: <Brush className="h-6 w-6" />,
+      title: "Code Cleaning",
+      description: "Remove redundancies, dead code, and optimize complex expressions automatically",
+      color: "bg-blue-400/10 text-blue-400 border-blue-400/20"
+    },
+    {
+      icon: <FileText className="h-6 w-6" />,
+      title: "Auto-Documentation",
+      description: "Generate comprehensive documentation for functions, classes and APIs from your codebase",
+      color: "bg-amber-400/10 text-amber-400 border-amber-400/20"
     },
     {
       icon: <GitMerge className="h-6 w-6" />,
@@ -55,7 +67,7 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index} 
